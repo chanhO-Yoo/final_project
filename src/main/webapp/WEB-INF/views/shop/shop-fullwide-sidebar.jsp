@@ -8,7 +8,7 @@
 
 <jsp:include page="/WEB-INF/views/common/header.jsp" />
 <!-- breadcrumb area -->
-        <div class="breadcrumb-area bg-img pt-230 pb-152" style="background-image: url(assets/img/banner/breadcrumb-3.jpg);">
+        <div class="breadcrumb-area bg-img pt-230 pb-152" style="background-image: url(${pageContext.request.contextPath }/resources/img/banner/breadcrumb-3.jpg);">
             <div class="container">
                 <div class="breadcrumb-content breadcrumb-black2 text-center">
                     <h2>Shop</h2>
@@ -46,7 +46,7 @@
                 <div class="summary-info-all">
                     <div class="summary-logo">
                         <a href="index.html">
-                            <img src="assets/img/logo/logo-3.png" alt="">
+                            <img src="${pageContext.request.contextPath }/resources/img/logo/logo-3.png" alt="">
                         </a>
                     </div>
                     <div class="summary-list-wrap">
@@ -85,7 +85,7 @@
                                     <div class="shop-wrap mb-40">
                                         <div class="shop-img">
                                             <a href="single-product.html">
-                                                <img src="assets/img/product/shop-fw-sidebar1.jpg" alt="">
+                                                <img src="${pageContext.request.contextPath }/resources/img/product/shop-fw-sidebar1.jpg" alt="">
                                             </a>
                                             <div class="shop-hover">
                                                 <div class="shop-card">
@@ -110,7 +110,7 @@
                                     <div class="shop-wrap mb-40">
                                         <div class="shop-img">
                                             <a href="single-product.html">
-                                                <img src="assets/img/product/shop-fw-sidebar2.jpg" alt="">
+                                                <img src="${pageContext.request.contextPath }/resources/img/product/shop-fw-sidebar2.jpg" alt="">
                                             </a>
                                             <span class="sale">Sale</span>
                                             <div class="shop-hover">
@@ -136,7 +136,7 @@
                                     <div class="shop-wrap mb-40">
                                         <div class="shop-img">
                                             <a href="single-product.html">
-                                                <img src="assets/img/product/shop-fw-sidebar3.jpg" alt="">
+                                                <img src="${pageContext.request.contextPath }/resources/img/product/shop-fw-sidebar3.jpg" alt="">
                                             </a>
                                             <span class="new">New</span>
                                             <div class="shop-hover">
@@ -163,7 +163,7 @@
                                     <div class="shop-wrap mb-40">
                                         <div class="shop-img">
                                             <a href="single-product.html">
-                                                <img src="assets/img/product/shop-fw-sidebar4.jpg" alt="">
+                                                <img src="${pageContext.request.contextPath }/resources/img/product/shop-fw-sidebar4.jpg" alt="">
                                             </a>
                                             <div class="shop-hover">
                                                 <div class="shop-card">
@@ -188,7 +188,7 @@
                                     <div class="shop-wrap mb-40">
                                         <div class="shop-img">
                                             <a href="single-product.html">
-                                                <img src="assets/img/product/shop-fw-sidebar5.jpg" alt="">
+                                                <img src="${pageContext.request.contextPath }/resources/img/product/shop-fw-sidebar5.jpg" alt="">
                                             </a>
                                             <span class="sale">Sale</span>
                                             <div class="shop-hover">
@@ -215,7 +215,7 @@
                                     <div class="shop-wrap mb-40">
                                         <div class="shop-img">
                                             <a href="single-product.html">
-                                                <img src="assets/img/product/shop-fw-sidebar6.jpg" alt="">
+                                                <img src="${pageContext.request.contextPath }/resources/img/product/shop-fw-sidebar6.jpg" alt="">
                                             </a>
                                             <div class="shop-hover">
                                                 <div class="shop-card">
@@ -240,7 +240,7 @@
                                     <div class="shop-wrap mb-40">
                                         <div class="shop-img">
                                             <a href="single-product.html">
-                                                <img src="assets/img/product/shop-fw-sidebar7.jpg" alt="">
+                                                <img src="${pageContext.request.contextPath }/resources/img/product/shop-fw-sidebar7.jpg" alt="">
                                             </a>
                                             <span class="new">New</span>
                                             <div class="shop-hover">
@@ -266,7 +266,7 @@
                                     <div class="shop-wrap mb-40">
                                         <div class="shop-img">
                                             <a href="single-product.html">
-                                                <img src="assets/img/product/shop-fw-sidebar8.jpg" alt="">
+                                                <img src="${pageContext.request.contextPath }/resources/img/product/shop-fw-sidebar8.jpg" alt="">
                                             </a>
                                             <div class="shop-hover">
                                                 <div class="shop-card">
@@ -291,7 +291,7 @@
                                     <div class="shop-wrap mb-40">
                                         <div class="shop-img">
                                             <a href="single-product.html">
-                                                <img src="assets/img/product/shop-fw-sidebar9.jpg" alt="">
+                                                <img src="${pageContext.request.contextPath }/resources/img/product/shop-fw-sidebar9.jpg" alt="">
                                             </a>
                                             <div class="shop-hover">
                                                 <div class="shop-card">
@@ -317,7 +317,7 @@
                                     <div class="shop-wrap mb-40">
                                         <div class="shop-img">
                                             <a href="single-product.html">
-                                                <img src="assets/img/product/shop-fw-sidebar1.jpg" alt="">
+                                                <img src="${pageContext.request.contextPath }/resources/img/product/shop-fw-sidebar1.jpg" alt="">
                                             </a>
                                             <span class="new">New</span>
                                             <div class="shop-hover">
@@ -343,7 +343,7 @@
                                     <div class="shop-wrap mb-40">
                                         <div class="shop-img">
                                             <a href="single-product.html">
-                                                <img src="assets/img/product/shop-fw-sidebar2.jpg" alt="">
+                                                <img src="${pageContext.request.contextPath }/resources/img/product/shop-fw-sidebar2.jpg" alt="">
                                             </a>
                                             <div class="shop-hover">
                                                 <div class="shop-card">
@@ -368,7 +368,7 @@
                                     <div class="shop-wrap mb-40">
                                         <div class="shop-img">
                                             <a href="single-product.html">
-                                                <img src="assets/img/product/shop-fw-sidebar3.jpg" alt="">
+                                                <img src="${pageContext.request.contextPath }/resources/img/product/shop-fw-sidebar3.jpg" alt="">
                                             </a>
                                             <span class="sale">Sale</span>
                                             <div class="shop-hover">
@@ -431,7 +431,7 @@
                             </div>
                             <div class="sidebar-widget mt-55">
                                 <div class="facebook-banner-wrap default-overlay-2">
-                                    <a href="#"><img src="assets/img/banner/banner-18.jpg" alt=""></a>
+                                    <a href="#"><img src="${pageContext.request.contextPath }/resources/img/banner/banner-18.jpg" alt=""></a>
                                     <div class="shop-offer">
                                         <h4>80</h4>
                                         <div class="offer-percent-wrap">
@@ -446,7 +446,7 @@
                                 <div class="sidebar-project-wrap mt-30">
                                     <div class="single-sidebar-project">
                                         <div class="sidebar-project-img">
-                                            <a href="#"><img src="assets/img/product/shop-small1.jpg" alt=""></a>
+                                            <a href="#"><img src="${pageContext.request.contextPath }/resources/img/product/shop-small1.jpg" alt=""></a>
                                         </div>
                                         <div class="sidebar-project-content">
                                             <h4><a href="#">Product Name 1</a></h4>
@@ -455,7 +455,7 @@
                                     </div>
                                     <div class="single-sidebar-project">
                                         <div class="sidebar-project-img">
-                                            <a href="#"><img src="assets/img/product/shop-small2.jpg" alt=""></a>
+                                            <a href="#"><img src="${pageContext.request.contextPath }/resources/img/product/shop-small2.jpg" alt=""></a>
                                         </div>
                                         <div class="sidebar-project-content">
                                             <h4><a href="#">Product Name 2</a></h4>
@@ -464,7 +464,7 @@
                                     </div>
                                     <div class="single-sidebar-project">
                                         <div class="sidebar-project-img">
-                                            <a href="#"><img src="assets/img/product/shop-small3.jpg" alt=""></a>
+                                            <a href="#"><img src="${pageContext.request.contextPath }/resources/img/product/shop-small3.jpg" alt=""></a>
                                         </div>
                                         <div class="sidebar-project-content">
                                             <h4><a href="#">Product Name 3</a></h4>

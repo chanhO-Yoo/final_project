@@ -9,7 +9,7 @@
 <jsp:include page="/WEB-INF/views/common/header.jsp" />
 
 <!-- breadcrumb area -->
-        <div class="breadcrumb-area bg-img pt-230 pb-152" style="background-image: url(assets/img/banner/breadcrumb-3.jpg);">
+        <div class="breadcrumb-area bg-img pt-230 pb-152" style="background-image: url(${pageContext.request.contextPath }/resources/img/banner/breadcrumb-3.jpg);">
             <div class="container">
                 <div class="breadcrumb-content breadcrumb-black2 text-center">
                     <h2>Shop</h2>
@@ -50,7 +50,7 @@
                 <div class="summary-info-all">
                     <div class="summary-logo">
                         <a href="index.html">
-                            <img src="assets/img/logo/logo-3.png" alt="">
+                            <img src="${pageContext.request.contextPath }/resources/img/logo/logo-3.png" alt="">
                         </a>
                     </div>
                     <div class="summary-list-wrap">

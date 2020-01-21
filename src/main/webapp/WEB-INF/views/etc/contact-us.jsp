@@ -33,7 +33,7 @@
                 <div class="summary-info-all">
                     <div class="summary-logo">
                         <a href="index.html">
-                            <img src="assets/img/logo/logo-3.png" alt="">
+                            <img src="${pageContext.request.contextPath }/resources/img/logo/logo-3.png" alt="">
                         </a>
                     </div>
                     <div class="summary-list-wrap">
@@ -70,7 +70,7 @@
                             <h2>Contact</h2>
                             <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elituis. </p>
                             <div class="contact-from pt-40">
-                                <form id="contact-form" action="assets/mail.php" method="post">
+                                <form id="contact-form" action="${pageContext.request.contextPath }/resources/mail.php" method="post">
                                     <input name="name" type="text" placeholder="Name">
                                     <input name="email" type="text" placeholder="Email">
                                     <textarea name="message" placeholder="Your message"></textarea>

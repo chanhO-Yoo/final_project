@@ -9,7 +9,7 @@
 <jsp:include page="/WEB-INF/views/common/header.jsp" />
 
 <!-- breadcrumb area -->
-        <div class="breadcrumb-area bg-img pt-230 pb-152 default-overlay-2" style="background-image: url(assets/img/banner/breadcrumb.jpg);">
+        <div class="breadcrumb-area bg-img pt-230 pb-152 default-overlay-2" style="background-image: url(${pageContext.request.contextPath }/resources/img/banner/breadcrumb.jpg);">
             <div class="container">
                 <div class="breadcrumb-content text-center">
                     <h2>About us</h2>
@@ -47,7 +47,7 @@
                 <div class="summary-info-all">
                     <div class="summary-logo">
                         <a href="index.html">
-                            <img src="assets/img/logo/logo-3.png" alt="">
+                            <img src="${pageContext.request.contextPath }/resources/img/logo/logo-3.png" alt="">
                         </a>
                     </div>
                     <div class="summary-list-wrap">
@@ -81,7 +81,7 @@
                 <div class="row d-flex align-items-center">
                     <div class="col-lg-6 col-md-12">
                         <div class="about-us-wrap mr-20">
-                            <img src="assets/img/banner/banner-4.jpg" alt="">
+                            <img src="${pageContext.request.contextPath }/resources/img/banner/banner-4.jpg" alt="">
                             <div class="works-video">
                                 <a class="video-btn video-popup" href="https://www.youtube.com/watch?v=YY1ERM-NIBY">
                                     <i class="ti-control-play"></i>
@@ -204,7 +204,7 @@
                         <div class="team-wrapper mb-30">
                             <div class="team-img">
                                 <a href="#">
-                                    <img src="assets/img/team/team-1.jpg" alt="">
+                                    <img src="${pageContext.request.contextPath }/resources/img/team/team-1.jpg" alt="">
                                 </a>
                                 <div class="team-action">
                                     <a class="action-plus facebook" href="#">
@@ -228,7 +228,7 @@
                         <div class="team-wrapper mb-30">
                             <div class="team-img">
                                 <a href="#">
-                                    <img src="assets/img/team/team-3.jpg" alt="">
+                                    <img src="${pageContext.request.contextPath }/resources/img/team/team-3.jpg" alt="">
                                 </a>
                                 <div class="team-action">
                                     <a class="action-plus facebook" href="#">
@@ -252,7 +252,7 @@
                         <div class="team-wrapper mb-30">
                             <div class="team-img">
                                 <a href="#">
-                                    <img src="assets/img/team/team-2.jpg" alt="">
+                                    <img src="${pageContext.request.contextPath }/resources/img/team/team-2.jpg" alt="">
                                 </a>
                                 <div class="team-action">
                                     <a class="action-plus facebook" href="#">
@@ -276,7 +276,7 @@
                         <div class="team-wrapper mb-30">
                             <div class="team-img">
                                 <a href="#">
-                                    <img src="assets/img/team/team-4.jpg" alt="">
+                                    <img src="${pageContext.request.contextPath }/resources/img/team/team-4.jpg" alt="">
                                 </a>
                                 <div class="team-action">
                                     <a class="action-plus facebook" href="#">
@@ -301,28 +301,28 @@
         </div>
         <div class="brand-logo-area pb-120">
             <div class="container">
-                <div class="brand-logo-pattern" style="background-image: url(assets/img/pattern/pattern-4.png);">
+                <div class="brand-logo-pattern" style="background-image: url(${pageContext.request.contextPath }/resources/img/pattern/pattern-4.png);">
                     <div class="brand-logo-active owl-carousel">
                         <div class="single-brand-logo">
-                            <img src="assets/img/brand-logo/1.png" alt="">
+                            <img src="${pageContext.request.contextPath }/resources/img/brand-logo/1.png" alt="">
                         </div>
                         <div class="single-brand-logo">
-                            <img src="assets/img/brand-logo/2.png" alt="">
+                            <img src="${pageContext.request.contextPath }/resources/img/brand-logo/2.png" alt="">
                         </div>
                         <div class="single-brand-logo">
-                            <img src="assets/img/brand-logo/3.png" alt="">
+                            <img src="${pageContext.request.contextPath }/resources/img/brand-logo/3.png" alt="">
                         </div>
                         <div class="single-brand-logo">
-                            <img src="assets/img/brand-logo/4.png" alt="">
+                            <img src="${pageContext.request.contextPath }/resources/img/brand-logo/4.png" alt="">
                         </div>
                         <div class="single-brand-logo">
-                            <img src="assets/img/brand-logo/5.png" alt="">
+                            <img src="${pageContext.request.contextPath }/resources/img/brand-logo/5.png" alt="">
                         </div>
                         <div class="single-brand-logo">
-                            <img src="assets/img/brand-logo/6.png" alt="">
+                            <img src="${pageContext.request.contextPath }/resources/img/brand-logo/6.png" alt="">
                         </div>
                         <div class="single-brand-logo">
-                            <img src="assets/img/brand-logo/3.png" alt="">
+                            <img src="${pageContext.request.contextPath }/resources/img/brand-logo/3.png" alt="">
                         </div>
                     </div>
                 </div>

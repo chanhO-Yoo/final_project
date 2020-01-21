@@ -9,7 +9,7 @@
 <jsp:include page="/WEB-INF/views/common/header.jsp" />
 
 <!-- breadcrumb area -->
-        <div class="breadcrumb-area bg-img pt-230 pb-152" style="background-image: url(assets/img/banner/breadcrumb-4.jpg);">
+        <div class="breadcrumb-area bg-img pt-230 pb-152" style="background-image: url(${pageContext.request.contextPath }/resources/img/banner/breadcrumb-4.jpg);">
             <div class="container">
                 <div class="breadcrumb-content breadcrumb-black2 text-center">
                     <h2>Shortcodes</h2>

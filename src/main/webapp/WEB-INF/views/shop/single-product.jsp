@@ -33,7 +33,7 @@
                 <div class="summary-info-all">
                     <div class="summary-logo">
                         <a href="index.html">
-                            <img src="assets/img/logo/logo-3.png" alt="">
+                            <img src="${pageContext.request.contextPath }/resources/img/logo/logo-3.png" alt="">
                         </a>
                     </div>
                     <div class="summary-list-wrap">
@@ -67,22 +67,22 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="product-details-img">
-                            <img class="zoompro" src="assets/img/product-details/product-detalis-l2.jpg" data-zoom-image="assets/img/product-details/single-product-bl2.jpg" alt="zoom"/>
+                            <img class="zoompro" src="${pageContext.request.contextPath }/resources/img/product-details/product-detalis-l2.jpg" data-zoom-image="${pageContext.request.contextPath }/resources/img/product-details/single-product-bl2.jpg" alt="zoom"/>
                             <div id="gallery" class="mt-15 product-dec-slider dec-slider-overlay">
-                                <a class="active" data-image="assets/img/product-details/product-detalis-l2.jpg" data-zoom-image="assets/img/product-details/single-product-bl2.jpg">
-                                    <img src="assets/img/product-details/product-detalis-s1.jpg" alt="">
+                                <a class="active" data-image="${pageContext.request.contextPath }/resources/img/product-details/product-detalis-l2.jpg" data-zoom-image="${pageContext.request.contextPath }/resources/img/product-details/single-product-bl2.jpg">
+                                    <img src="${pageContext.request.contextPath }/resources/img/product-details/product-detalis-s1.jpg" alt="">
                                 </a>
-                                <a data-image="assets/img/product-details/product-detalis-l3.jpg" data-zoom-image="assets/img/product-details/single-product-bl3.jpg">
-                                    <img src="assets/img/product-details/product-detalis-s2.jpg" alt="">
+                                <a data-image="${pageContext.request.contextPath }/resources/img/product-details/product-detalis-l3.jpg" data-zoom-image="${pageContext.request.contextPath }/resources/img/product-details/single-product-bl3.jpg">
+                                    <img src="${pageContext.request.contextPath }/resources/img/product-details/product-detalis-s2.jpg" alt="">
                                 </a>
-                                <a data-image="assets/img/product-details/single-product-l4.jpg" data-zoom-image="assets/img/product-details/single-product-bl1.jpg">
-                                    <img src="assets/img/product-details/product-detalis-s3.jpg" alt="">
+                                <a data-image="${pageContext.request.contextPath }/resources/img/product-details/single-product-l4.jpg" data-zoom-image="${pageContext.request.contextPath }/resources/img/product-details/single-product-bl1.jpg">
+                                    <img src="${pageContext.request.contextPath }/resources/img/product-details/product-detalis-s3.jpg" alt="">
                                 </a>
-                                <a data-image="assets/img/product-details/product-detalis-l2.jpg" data-zoom-image="assets/img/product-details/single-product-bl2.jpg">
-                                    <img src="assets/img/product-details/product-detalis-s1.jpg" alt="">
+                                <a data-image="${pageContext.request.contextPath }/resources/img/product-details/product-detalis-l2.jpg" data-zoom-image="${pageContext.request.contextPath }/resources/img/product-details/single-product-bl2.jpg">
+                                    <img src="${pageContext.request.contextPath }/resources/img/product-details/product-detalis-s1.jpg" alt="">
                                 </a>
-                                <a data-image="assets/img/product-details/product-detalis-l3.jpg" data-zoom-image="assets/img/product-details/single-product-bl3.jpg">
-                                    <img src="assets/img/product-details/product-detalis-s2.jpg" alt="">
+                                <a data-image="${pageContext.request.contextPath }/resources/img/product-details/product-detalis-l3.jpg" data-zoom-image="${pageContext.request.contextPath }/resources/img/product-details/single-product-bl3.jpg">
+                                    <img src="${pageContext.request.contextPath }/resources/img/product-details/product-detalis-s2.jpg" alt="">
                                 </a>
                             </div>
                         </div>
@@ -207,7 +207,7 @@
                                     <div class="review-wrapper">
                                         <div class="single-review">
                                             <div class="review-img">
-                                                <img alt="" src="assets/img/testimonial/client-7.png">
+                                                <img alt="" src="${pageContext.request.contextPath }/resources/img/testimonial/client-7.png">
                                             </div>
                                             <div class="review-content">
                                                 <div class="review-top-wrap">
@@ -234,7 +234,7 @@
                                         </div>
                                         <div class="single-review child-review">
                                             <div class="review-img">
-                                                <img alt="" src="assets/img/testimonial/client-7.png">
+                                                <img alt="" src="${pageContext.request.contextPath }/resources/img/testimonial/client-7.png">
                                             </div>
                                             <div class="review-content">
                                                 <div class="review-top-wrap">
@@ -313,7 +313,7 @@
                     <div class="shop-wrap">
                         <div class="shop-img">
                             <a href="#">
-                                <img src="assets/img/product/shop-9.jpg" alt="">
+                                <img src="${pageContext.request.contextPath }/resources/img/product/shop-9.jpg" alt="">
                             </a>
                             <div class="shop-hover">
                                 <div class="shop-card">
@@ -337,7 +337,7 @@
                     <div class="shop-wrap">
                         <div class="shop-img">
                             <a href="#">
-                                <img src="assets/img/product/shop-10.jpg" alt="">
+                                <img src="${pageContext.request.contextPath }/resources/img/product/shop-10.jpg" alt="">
                             </a>
                             <span class="new">New</span>
                             <div class="shop-hover">
@@ -362,7 +362,7 @@
                     <div class="shop-wrap">
                         <div class="shop-img">
                             <a href="#">
-                                <img src="assets/img/product/shop-1.jpg" alt="">
+                                <img src="${pageContext.request.contextPath }/resources/img/product/shop-1.jpg" alt="">
                             </a>
                             <div class="shop-hover">
                                 <div class="shop-card">
@@ -386,7 +386,7 @@
                     <div class="shop-wrap">
                         <div class="shop-img">
                             <a href="#">
-                                <img src="assets/img/product/shop-2.jpg" alt="">
+                                <img src="${pageContext.request.contextPath }/resources/img/product/shop-2.jpg" alt="">
                             </a>
                             <div class="shop-hover">
                                 <div class="shop-card">
@@ -410,7 +410,7 @@
                     <div class="shop-wrap">
                         <div class="shop-img">
                             <a href="#">
-                                <img src="assets/img/product/shop-3.jpg" alt="">
+                                <img src="${pageContext.request.contextPath }/resources/img/product/shop-3.jpg" alt="">
                             </a>
                             <div class="shop-hover">
                                 <div class="shop-card">
