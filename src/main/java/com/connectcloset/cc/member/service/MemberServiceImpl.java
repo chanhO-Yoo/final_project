@@ -3,8 +3,8 @@ package com.connectcloset.cc.member.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.kh.spring.member.model.dao.MemberDAO;
-import com.kh.spring.member.model.vo.Member;
+import com.connectcloset.cc.member.model.dao.MemberDAO;
+import com.connectcloset.cc.member.model.vo.Member;
 
 @Service
 public class MemberServiceImpl implements MemberService{

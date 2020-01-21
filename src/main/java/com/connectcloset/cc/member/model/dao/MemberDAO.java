@@ -1,6 +1,6 @@
 package com.connectcloset.cc.member.model.dao;
 
-import com.kh.spring.member.model.vo.Member;
+import com.connectcloset.cc.member.model.vo.Member;
 
 public interface MemberDAO {
 

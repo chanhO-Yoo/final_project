@@ -1,6 +1,5 @@
 package com.connectcloset.cc.member.controller;
 
-import javax.management.RuntimeErrorException;
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -16,9 +15,9 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.kh.spring.member.model.exception.MemberException;
-import com.kh.spring.member.model.vo.Member;
-import com.kh.spring.member.service.MemberService;
+import com.connectcloset.cc.member.model.exception.MemberException;
+import com.connectcloset.cc.member.model.vo.Member;
+import com.connectcloset.cc.member.service.MemberService;
 
 /*value로 지정한 이름의 변수들은 session에 담아둔다.*/
 @SessionAttributes(value= {"memberLoggedIn"})
