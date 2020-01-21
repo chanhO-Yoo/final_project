@@ -7,11 +7,15 @@
 		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
+	<!-- #5. appServlet관련 빈 설정 : application안에 servlet이 여러개 존재할 수 있다. -->
+	
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 	
+	<!-- MVC와 관련된 annotation을 처리한다 -->
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
 
+	<!-- /resources/로 시작하는 요청은 servlet이 처리하지 않고, /resources/폴더의 자원을 제공한다. (정적 자원은 직접 가서 찾아와라) -->
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
 
@@ -21,8 +25,18 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	<!-- Spring Container에 bean을 등록하는 역할  : 지정한 패키지를 포함하는 하위의 모든 @Component 어노테이션이 붙은 클래스를 bean으로 생성, 관리한다.-->
+	<!-- @Controller, @Service, @Repository가 @Component의 후손이라 인식한다 -->
+	<!-- bean의 이름은 소문자로 시작하는 class명이다 -->
 	<context:component-scan base-package="com.connectcloset.cc" />
 	
+	<!-- #9. 인터셉터 등록 -->
+	<interceptors>
+		<interceptor>
+			<mapping path="/**"/>
+			<beans:bean id="loggerInterceptor" class="com.connectcloset.cc.common.interceptor.LoggerInterceptor"></beans:bean>
+		</interceptor>
+	</interceptors>
 	
 	
 </beans:beans>
