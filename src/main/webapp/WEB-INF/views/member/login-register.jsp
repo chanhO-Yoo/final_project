@@ -3,6 +3,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ page import="java.net.URLEncoder" %>
+<%@ page import="java.security.SecureRandom" %>
+<%@ page import="java.math.BigInteger" %>
 
 <fmt:requestEncoding value="utf-8"/>
 
@@ -96,9 +99,9 @@
                                 <div class="tab-content login-regi-content">
                                     <div id="login" class="tab-pane active">
                                         <div class="login-register-form">
-                                            <form action="/member/login-register.do" method="post">
-                                                <input type="text" name="user-name" placeholder="Your Name">
-                                                <input type="password" name="user-password" placeholder="Password">
+                                            <form action="${pageContext.request.contextPath}/member/login-login.do" method="post">
+                                                <input type="text" name="memberId" placeholder="Your Name">
+                                                <input type="password" name="password" placeholder="Password">
                                                 <div class="submit-btn">
                                                     <button class="btn-hover" type="submit">Log In</button>
                                                 </div>
@@ -114,12 +117,12 @@
                                     </div>
                                     <div id="register" class="tab-pane">
                                         <div class="login-register-form">
-                                            <form action="#" method="post">
-                                                <input type="text" name="user-name" placeholder="First Name">
-                                                <input type="text" name="user-name" placeholder="Last Name">
-                                                <input type="text" name="user-name" placeholder="Telephone">
-                                                <input name="user-email" placeholder="Email" type="email">
-                                                <input type="password" name="user-password" placeholder="Password">
+                                            <form action="${pageContext.request.contextPath}/member/login-EnrollEnd.do" method="post">
+                                                <input type="text" name="memberId" placeholder="First Name">
+                                                <input type="text" name="memberName" placeholder="Last Name">
+                                                <input type="text" name="phone" placeholder="Telephone">
+                                                <input name="email" placeholder="Email" type="email">
+                                                <input type="password" name="password" placeholder="Password">
                                                 <div class="submit-btn">
                                                     <button class="btn-hover" type="submit">Register</button>
                                                 </div>

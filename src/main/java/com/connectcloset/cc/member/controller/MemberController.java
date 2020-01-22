@@ -36,7 +36,87 @@ public class MemberController {
 	@RequestMapping("/member/login-register.do")
 	public void memberLogin() {
 		
+		
+		
 	}
+	//ModelAndView객체로 처리
+	@PostMapping("/member/login-login.do")
+	public ModelAndView memberLogin(@RequestParam String memberId, @RequestParam String password, ModelAndView mav, HttpSession session) {
+	
+		try {
+			//1. 업무로직
+			Member m = memberService.selectOneMember(memberId);
+			logger.debug("m={}",m);
+			
+			String msg = "";
+			String loc = "/";
+			//로그인 분기 처리
+			if(m==null) {
+				msg="존재하지 않는 아이디입니다.";
+			}
+			else {
+				//DB의 비밀번호와 입력한 비밀번호의 일치여부 확인
+				if(bcryptPasswordEncoder.matches(password, m.getPassword())) {
+					msg="로그인 성공!";
+					
+					//세션에 로그인한 Member객체 저장
+					//session.setAttribute("memberLoggedIn", m);
+					//model에 로그이한 Member객체 저장(로그인 성공이 뜨고 로그인이 풀려있다. = requset에 담겨있기 때문에 풀린다.)
+					mav.addObject("memberLoggedIn", m);
+				}
+				else {
+					msg="비밀번호가 틀렸습니다.";
+				}
+			}
+			
+			//2. view모델 처리
+			mav.addObject("msg",msg);
+			mav.addObject("loc",loc);
+			
+			//viewName지정
+			mav.setViewName("common/msg");
+			
+//			if(true) throw new RuntimeException("내가 던진 로그인 오류");
+			
+		} catch(Exception e) {
+			logger.error("로그인 오류!",e);
+			
+			throw new MemberException("회원관리 오류!",e);
+		}
+		
+		return mav;
+	}
+	@PostMapping("/member/login-EnrollEnd.do")
+	public String memberEnrollEnd(Member member, Model model){
+		logger.debug("회원등록요청!");
+		String rawPassword = member.getPassword();
+		String encryptedPassword
+			= bcryptPasswordEncoder.encode(rawPassword);
+		
+		logger.debug("rawPassword={}",rawPassword);
+		logger.debug("encryptedPassword={}",encryptedPassword);
+		
+		//비밀번호 암호화 처리
+		member.setPassword(encryptedPassword);
+		
+		logger.debug("member={}",member);
+		
+		//1.비지니스로직 실행
+		int result = memberService.insertMember(member);
+		
+		//2.처리결과에 따라 view단 분기처리
+		String loc = "/"; 
+		String msg = "";
+		if(result>0) msg="회원가입성공!";
+		else msg="회원가입성공!";
+		
+		model.addAttribute("loc", loc);
+		model.addAttribute("msg", msg);
+		
+		return "common/msg";
+	}
+	
+
 	
 	@RequestMapping("/etc/contact-us.do")
 	public void contactUs() {
