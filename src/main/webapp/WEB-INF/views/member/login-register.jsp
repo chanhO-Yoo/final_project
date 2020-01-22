@@ -96,7 +96,7 @@
                                 <div class="tab-content login-regi-content">
                                     <div id="login" class="tab-pane active">
                                         <div class="login-register-form">
-                                            <form action="#" method="post">
+                                            <form action="/member/login-register.do" method="post">
                                                 <input type="text" name="user-name" placeholder="Your Name">
                                                 <input type="password" name="user-password" placeholder="Password">
                                                 <div class="submit-btn">
