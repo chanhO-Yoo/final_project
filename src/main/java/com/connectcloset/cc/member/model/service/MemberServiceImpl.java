@@ -1,4 +1,4 @@
-package com.connectcloset.cc.member.service;
+package com.connectcloset.cc.member.model.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,10 +20,5 @@ public class MemberServiceImpl implements MemberService{
 	@Override
 	public Member selectOneMember(String memberId) {
 		return memberDAO.selectOneMember(memberId);
-	}
-
-	@Override
-	public int updateMember(Member member) {
-		return memberDAO.updateMember(member);
 	}
 }

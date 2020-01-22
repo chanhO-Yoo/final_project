@@ -16,8 +16,8 @@ import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.connectcloset.cc.member.model.exception.MemberException;
+import com.connectcloset.cc.member.model.service.MemberService;
 import com.connectcloset.cc.member.model.vo.Member;
-import com.connectcloset.cc.member.service.MemberService;
 
 /*value로 지정한 이름의 변수들은 session에 담아둔다.*/
 @SessionAttributes(value= {"memberLoggedIn"})
@@ -64,15 +64,8 @@ public class MemberController {
 	//수업자료 ============
 	
 	
-	/*//리턴 주소와 매핑주소가 가아 return타입을 void로 지정
-	@RequestMapping("/member/memberEnroll.do")
-	public void memberEnroll() {
-		
-		
-	}
-	
-	@RequestMapping(value="/member/memberEnrollEnd.do", method=RequestMethod.POST)
-	@PostMapping("/member/memberEnrollEnd.do")
+//	@RequestMapping(value="/member/memberEnrollEnd.do", method=RequestMethod.POST)
+	@PostMapping("/member/SignInEnd.do")
 	public String memberEnrollEnd(Model model, Member member) {
 		logger.debug("회원등록요청");
 		String rawPassword = member.getPassword();
@@ -94,7 +87,7 @@ public class MemberController {
 		return "common/msg";
 	}
 	
-	*//**
+	/**
 	 * Model은 mvc패턴의 m(model)이 아니라 viewModel을 가리킨다.
 	 * view단에서 처리할 데이터저장소, 하나의 Map 객체.(key - value형식)
 	 * 
@@ -139,7 +132,7 @@ public class MemberController {
 		return "common/msg";
 	}
 	
-	ModelAndView객체로 처리
+	ModelAndView객체로 처리 */
 	@PostMapping("/member/memberLogin.do")
 	public ModelAndView memberLogin(@RequestParam String memberId, @RequestParam String password, ModelAndView mav, HttpSession session) {
 	
@@ -176,8 +169,6 @@ public class MemberController {
 			//viewName지정
 			mav.setViewName("common/msg");
 			
-//			if(true) throw new RuntimeException("내가 던진 로그인 오류");
-			
 		} catch(Exception e) {
 			logger.error("로그인 오류!",e);
 			
@@ -190,14 +181,14 @@ public class MemberController {
 	
 	
 	
-	*//**
+	/**
 	 * @SessionAttribute를 이용해서 모델에 속성을 저장한 경우는
 	 * SessionStatus객체의 setComplete메서드를 통해 세션 폐기.
 	 * 
 	 * 기존방식 HttpSession.setAttribute한 경우에는
 	 * HttpSession.invalidate메서드로 세션 폐기한다.
 	 * 
-	 *//*
+	 */
 	
 	@RequestMapping("/member/memberLogout.do")
 	public String memberLogout(SessionStatus sessionStatus) {
@@ -212,7 +203,8 @@ public class MemberController {
 		return "redirect:/";
 	}
 	
-//	@RequestMapping(value="/member/memberView.do", method= {RequestMethod.POST, RequestMethod.GET})
+	/*
+	@RequestMapping(value="/member/memberView.do", method= {RequestMethod.POST, RequestMethod.GET})
 	@RequestMapping("/member/memberView.do")
 	public String memberView(@RequestParam String memberId, Model model) {
 		
@@ -236,6 +228,6 @@ public class MemberController {
 		model.addAttribute("m",m);
 		
 		return "member/memberView";
-	}*/
-	
+	}
+	*/
 }

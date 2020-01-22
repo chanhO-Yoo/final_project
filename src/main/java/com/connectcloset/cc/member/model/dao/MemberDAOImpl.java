@@ -22,9 +22,4 @@ public class MemberDAOImpl implements MemberDAO{
 	public Member selectOneMember(String memberId) {
 		return sqlSession.selectOne("member.selectOneMember",memberId);
 	}
-
-	@Override
-	public int updateMember(Member member) {
-		return sqlSession.update("member.updateMember",member);
-	}
 }

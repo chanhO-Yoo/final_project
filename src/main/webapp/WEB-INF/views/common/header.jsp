@@ -164,6 +164,11 @@
                         </nav>
                     </div>
                     <div class="header-right-wrap mt-55">
+                    	<div class="header-search mr-20">
+                    		<button class="sidebar-trigger-user" onclick="location.href='${pageContext.request.contextPath }/member/login-register.do'">
+                    			<span class="ti-user"></span>
+                    		</button>
+                    	</div>
                         <div class="header-search mr-20">
                             <button class="sidebar-trigger-search">
                                 <span class="ti-search"></span>

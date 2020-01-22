@@ -96,9 +96,9 @@
                                 <div class="tab-content login-regi-content">
                                     <div id="login" class="tab-pane active">
                                         <div class="login-register-form">
-                                            <form action="#" method="post">
-                                                <input type="text" name="user-name" placeholder="Your Name">
-                                                <input type="password" name="user-password" placeholder="Password">
+                                            <form name="memberLoginFrm" action="${pageContext.request.contextPath}/member/memberLogin.do" method="post">
+                                                <input type="text" name="memberId" placeholder="ID">
+                                                <input type="password" name="password" placeholder="Password">
                                                 <div class="submit-btn">
                                                     <button class="btn-hover" type="submit">Log In</button>
                                                 </div>
@@ -114,12 +114,12 @@
                                     </div>
                                     <div id="register" class="tab-pane">
                                         <div class="login-register-form">
-                                            <form action="#" method="post">
-                                                <input type="text" name="user-name" placeholder="First Name">
-                                                <input type="text" name="user-name" placeholder="Last Name">
-                                                <input type="text" name="user-name" placeholder="Telephone">
-                                                <input name="user-email" placeholder="Email" type="email">
-                                                <input type="password" name="user-password" placeholder="Password">
+                                            <form name="memberSignInFrm" action="${pageContext.request.contextPath}/member/SignInEnd.do" method="post">
+                                                <input type="text" name="memberId" placeholder="ID">
+                                                <input type="text" name="memberName" placeholder="NAME">
+                                                <input type="text" name="phone" placeholder="Telephone">
+                                                <input name="email" placeholder="email" type="email">
+                                                <input type="password" name="password" placeholder="Password">
                                                 <div class="submit-btn">
                                                     <button class="btn-hover" type="submit">Register</button>
                                                 </div>

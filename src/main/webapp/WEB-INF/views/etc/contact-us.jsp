@@ -7,7 +7,11 @@
 <fmt:requestEncoding value="utf-8"/>
 
 <jsp:include page="/WEB-INF/views/common/header.jsp" />
-
+<style>
+.main-menu ul li a {
+	color: #15273e !important;
+}
+</style>
 <!-- main-search start -->
         <div class="main-search-active">
             <div class="sidebar-search-icon">
