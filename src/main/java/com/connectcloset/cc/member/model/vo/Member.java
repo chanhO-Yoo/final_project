@@ -9,10 +9,16 @@ public class Member implements Serializable {
 
 	private int memberNo;
 	private String memberId;
+	private String memberPassword;
 	private String memberName;
-	private String phone;
-	private String email;
-	private String password;
+	private String memberPhone;
+	private String memberEmail;
+	private int memberPostcode;
+	private String memberAddress;
+	private String memberDetailAddress;
+	private char memberGender;
+	private Date memberBirthday;
+	private String memberValidateKey;
 	private Date enrollDate;
 	
 	public Member() {
@@ -20,15 +26,22 @@ public class Member implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Member(int memberNo, String memberId, String memberName, String phone, String email, String password,
-			Date enrollDate) {
+	public Member(int memberNo, String memberId, String memberPassword, String memberName, String memberPhone,
+			String memberEmail, int memberPostcode, String memberAddress, String memberDetailAddress, char memberGender,
+			Date memberBirthday, String memberValidateKey, Date enrollDate) {
 		super();
 		this.memberNo = memberNo;
 		this.memberId = memberId;
+		this.memberPassword = memberPassword;
 		this.memberName = memberName;
-		this.phone = phone;
-		this.email = email;
-		this.password = password;
+		this.memberPhone = memberPhone;
+		this.memberEmail = memberEmail;
+		this.memberPostcode = memberPostcode;
+		this.memberAddress = memberAddress;
+		this.memberDetailAddress = memberDetailAddress;
+		this.memberGender = memberGender;
+		this.memberBirthday = memberBirthday;
+		this.memberValidateKey = memberValidateKey;
 		this.enrollDate = enrollDate;
 	}
 
@@ -48,6 +61,14 @@ public class Member implements Serializable {
 		this.memberId = memberId;
 	}
 
+	public String getMemberPassword() {
+		return memberPassword;
+	}
+
+	public void setMemberPassword(String memberPassword) {
+		this.memberPassword = memberPassword;
+	}
+
 	public String getMemberName() {
 		return memberName;
 	}
@@ -56,28 +77,68 @@ public class Member implements Serializable {
 		this.memberName = memberName;
 	}
 
-	public String getPhone() {
-		return phone;
+	public String getMemberPhone() {
+		return memberPhone;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setMemberPhone(String memberPhone) {
+		this.memberPhone = memberPhone;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getMemberEmail() {
+		return memberEmail;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setMemberEmail(String memberEmail) {
+		this.memberEmail = memberEmail;
 	}
 
-	public String getPassword() {
-		return password;
+	public int getMemberPostcode() {
+		return memberPostcode;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setMemberPostcode(int memberPostcode) {
+		this.memberPostcode = memberPostcode;
+	}
+
+	public String getMemberAddress() {
+		return memberAddress;
+	}
+
+	public void setMemberAddress(String memberAddress) {
+		this.memberAddress = memberAddress;
+	}
+
+	public String getMemberDetailAddress() {
+		return memberDetailAddress;
+	}
+
+	public void setMemberDetailAddress(String memberDetailAddress) {
+		this.memberDetailAddress = memberDetailAddress;
+	}
+
+	public char getMemberGender() {
+		return memberGender;
+	}
+
+	public void setMemberGender(char memberGender) {
+		this.memberGender = memberGender;
+	}
+
+	public Date getMemberBirthday() {
+		return memberBirthday;
+	}
+
+	public void setMemberBirthday(Date memberBirthday) {
+		this.memberBirthday = memberBirthday;
+	}
+
+	public String getMemberValidateKey() {
+		return memberValidateKey;
+	}
+
+	public void setMemberValidateKey(String memberValidateKey) {
+		this.memberValidateKey = memberValidateKey;
 	}
 
 	public Date getEnrollDate() {
@@ -94,9 +155,15 @@ public class Member implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Member [memberNo=" + memberNo + ", memberId=" + memberId + ", memberName=" + memberName + ", phone="
-				+ phone + ", email=" + email + ", password=" + password + ", enrollDate=" + enrollDate + "]";
+		return "Member [memberNo=" + memberNo + ", memberId=" + memberId + ", memberPassword=" + memberPassword
+				+ ", memberName=" + memberName + ", memberPhone=" + memberPhone + ", memberEmail=" + memberEmail
+				+ ", memberPostcode=" + memberPostcode + ", memberAddress=" + memberAddress + ", memberDetailAddress="
+				+ memberDetailAddress + ", memberGender=" + memberGender + ", memberBirthday=" + memberBirthday
+				+ ", memberValidateKey=" + memberValidateKey + ", enrollDate=" + enrollDate + "]";
 	}
+
+	
+
 	
 	
 	

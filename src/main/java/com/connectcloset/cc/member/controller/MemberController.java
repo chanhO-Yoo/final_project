@@ -1,7 +1,9 @@
 package com.connectcloset.cc.member.controller;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.omg.CORBA.Request;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
@@ -17,6 +20,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.connectcloset.cc.member.model.exception.MemberException;
 import com.connectcloset.cc.member.model.service.MemberService;
+import com.connectcloset.cc.member.model.service.UserMailSendService;
 import com.connectcloset.cc.member.model.vo.Member;
 
 import oracle.jdbc.proxy.annotation.Post;
@@ -35,28 +39,57 @@ public class MemberController {
 	@Autowired
 	BCryptPasswordEncoder bcryptPasswordEncoder;
 	
+	@Autowired
+	private UserMailSendService mailsender;
+
 	@RequestMapping("/member/login-register.do")
 	public void memberLogin() {
 		
 	}
 	
 	@PostMapping("/member/enrollMember.do")
-	public String enrollMember(Model model, Member m) {
+	public String enrollMember(Model model, Member m, HttpServletRequest request) {
 		logger.debug("회원등록요청");
-		String rawPwd = m.getPassword();
+		String rawPwd = m.getMemberPassword();
 		logger.debug("Member={}",m);
 		logger.debug("rawPwd={}",rawPwd);
 		String encryptPwd = bcryptPasswordEncoder.encode(rawPwd);
 		
-		m.setPassword(encryptPwd);
+		m.setMemberPassword(encryptPwd);
 		
 		int result = memberService.enrollMember(m);
 		logger.debug("result= {}",result);
+		
+		mailsender.mailSendWithUserKey(m.getMemberEmail(),m.getMemberId(),request);
 		
 		model.addAttribute("msg", result>0?"등록성공":"등록실패");
 		model.addAttribute("loc", "/");
 		return "common/msg";
 	}
+	
+	// e-mail 인증 컨트롤러
+	@RequestMapping(value = "member/validateKey.do", method = RequestMethod.GET)
+	public ModelAndView key_alterConfirm(@RequestParam String memberId, @RequestParam String validateKey, ModelAndView mav) {
+
+		int result = mailsender.alter_userKey_service(memberId, validateKey); // mailsender의 경우 @Autowired
+		
+		String msg = "";
+		String loc = "";
+		
+		if(result>0) {
+			msg = "회원가입에 성공했습니다. 홈페이지로 이동합니다.";
+		}
+		else {
+			msg = "회원가입에 실패했습니다.";
+		}
+		mav.addObject("msg",msg);
+		mav.addObject("loc","/");
+
+		mav.setViewName("common/msg");
+		
+		return mav;
+	}
+	
 	
 	@PostMapping("/member/loginMember.do")
 	public ModelAndView loginMember(ModelAndView mav, @RequestParam String memberId, @RequestParam String password, HttpSession session) {
@@ -70,7 +103,7 @@ public class MemberController {
 			msg="존재하지 않는 아이디입니다.";
 		}
 		else {
-			if(bcryptPasswordEncoder.matches(password, m.getPassword())) {
+			if(bcryptPasswordEncoder.matches(password, m.getMemberPassword())) {
 				msg="로그인성공! "+m.getMemberName()+"님 환영합니다.";
 				
 				//세션에 로그인 객체 저장

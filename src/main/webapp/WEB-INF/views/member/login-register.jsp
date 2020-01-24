@@ -117,24 +117,24 @@
                                         <div class="login-register-form">
                                             <form action="${pageContext.request.contextPath }/member/enrollMember.do" method="post">
 	                                            <div class="form-group row">
-													<label for="memberId" class="col-sm-2 col-form-label">아이디</label>
+													<label for="memberId" class="col-sm-2 col-form-label">아이디2</label>
 													<div class="col-sm-7">
-													    <input type="text" readonly class="form-control-plaintext" id="memberId" name="memberId" placeholder="6자 이상 영문,숫자의 조합">
+													    <input type="text" class="form-control-plaintext" id="memberId" name="memberId" placeholder="6자 이상 영문,숫자의 조합">
 													</div>
 												    <div class="col-sm-3">
 												    	<button type="button" class="btn btn-info btn-lg" style="height:45px;">중복확인</button>
 												    </div>
 												</div>
 												<div class="form-group row">
-												    <label for="password" class="col-sm-2 col-form-label">비밀번호</label>
+												    <label for="memberPassword" class="col-sm-2 col-form-label">비밀번호</label>
 												    <div class="col-sm-10">
-												        <input type="password" class="form-control" id="password" name="password">
+												        <input type="password" class="form-control" id="memberPassword" name="memberPassword">
 												    </div>
 												</div>
 												<div class="form-group row">
-												    <label for="PasswordCheck" class="col-sm-2 col-form-label">비밀번호확인</label>
+												    <label for="memberPasswordCheck" class="col-sm-2 col-form-label">비밀번호확인</label>
 													<div class="col-sm-10">
-												        <input type="password" class="form-control" id="PasswordCheck" name="PasswordCheck">
+												        <input type="password" class="form-control" id="memberPasswordCheck" name="memberPasswordCheck">
 												    </div>
 												</div>
 		                                        <div class="form-group row">
@@ -143,53 +143,55 @@
 											    		<input type="text" class="form-control-plaintext" id="memberName" name="memberName" placeholder="이름">
 											    	</div>
 												</div>
+												
 		                                        <div class="form-group row">
-												    <label for="email" class="col-sm-2 col-form-label">이메일</label>
+												    <label for="memberEmail" class="col-sm-2 col-form-label">이메일</label>
 												    <div class="col-sm-10">
-											    		<input type="email" class="form-control-plaintext" id="email" name="email" placeholder="email@example.com">
+											    		<input type="email" class="form-control-plaintext" id="memberEmail" name="memberEmail" placeholder="email@example.com">
 											    	</div>
 												</div>
+												
 												<div class="form-group row">
-												    <label for="phone" class="col-sm-2 col-form-label">연락처</label>
+												    <label for="memberPhone" class="col-sm-2 col-form-label">연락처</label>
 												    <div class="col-sm-10">
-											    		<input type="tel" class="form-control-plaintext" id="phone" name="phone" placeholder="숫자만 입력해주세요" maxlength="11">
+											    		<input type="tel" class="form-control-plaintext" id="memberPhone" name="memberPhone" placeholder="숫자만 입력해주세요" maxlength="11">
 											    	</div>
 												</div>
-												<div class="form-group row">
-												    <label for="postcode" class="col-sm-2 col-form-label">주소</label>
+												<div class="form-group row" style="margin-bottom: 0px;">
+												    <label for="memberPostCode" class="col-sm-2 col-form-label">주소</label>
 												    <div class="col-sm-7">
-											    		<input type="text" class="form-control-plaintext" id="postcode" name="postcode" placeholder="우편번호">
+											    		<input type="text" class="form-control-plaintext" id="memberPostCode" name="memberPostCode" placeholder="우편번호">
 											    	</div>
 											    	<div class="col-sm-3">
 												    	<button type="button" class="btn btn-info btn-lg" style="height:45px;" onclick="findAddress()">주소검색</button>
 												    </div>
 												</div>
-												<div class="form-group row">
+												<div class="form-group row" style="margin-bottom: 0px;">
 												    <div class="offset-sm-2 col-sm-10">
-											    		<input type="text" class="form-control-plaintext" id="address" name="address" placeholder="주소">
+											    		<input type="text" class="form-control-plaintext" id="memberAddress" name="memberAddress" placeholder="주소">
 											    	</div>
 											   	</div>
-												<div class="form-group row">
+												<div class="form-group row" style="margin-bottom: 0px;">
 												    <div class="offset-sm-2 col-sm-10">
-											    		<input type="text" class="form-control-plaintext" id="detailAddress" name="detailAddress" placeholder="상세주소">
+											    		<input type="text" class="form-control-plaintext" id="memberDetailAddress" name="memberDetailAddress" placeholder="상세주소">
 											    	</div>
 												</div>
 		                                        <div class="form-group row">
-												    <label for="birth" class="col-sm-2 col-form-label">생년월일</label>
+												    <label for="memberBirthday" class="col-sm-2 col-form-label">생년월일</label>
 												    <div class="col-sm-10">
-											    		<input type="date" class="form-control" id="birth" name="birth" value="2011-08-19">
+											    		<input type="date" class="form-control" id="memberBirthday" name="memberBirthday" value="2011-08-19">
 											    	</div>
 												</div>
 												<div class="form-group row">
-												    <label for="gender" class="col-sm-2 col-form-label">성별</label>
+												    <label for="memberGender" class="col-sm-2 col-form-label">성별</label>
 												    <div class="col-sm-10">
 													    <label class="custom-control custom-radio">
-															<input id="male" name="gender" type="radio" class="custom-control-input" value="M">
+															<input id="male" name="memberGender" type="radio" class="custom-control-input" value="M">
 															<span class="custom-control-indicator"></span>
 															<span class="custom-control-description">남</span>
 														</label>
 														<label class="custom-control custom-radio">
-															<input id="female" name="gender" type="radio" class="custom-control-input" value="F">
+															<input id="female" name="memberGender" type="radio" class="custom-control-input" value="F">
 															<span class="custom-control-indicator"></span>
 															<span class="custom-control-description">여</span>
 														</label>
@@ -246,10 +248,10 @@
                 }
 
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
-                document.getElementById('postcode').value = data.zonecode;
-                document.getElementById("address").value = addr;
+                document.getElementById("memberPostCode").value = data.zonecode;
+                document.getElementById("memberAddress").value = addr;
                 // 커서를 상세주소 필드로 이동한다.
-                document.getElementById("detailAddress").focus();
+                document.getElementById("memberDetailAddress").focus();
             }
         }).open();
     }

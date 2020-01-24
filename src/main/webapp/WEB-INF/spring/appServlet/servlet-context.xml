@@ -25,6 +25,25 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	<!-- 회원가입 메일 인증 bean추가 -->
+	<beans:bean id="mailSender"	class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<beans:property name="host" value="smtp.gmail.com" />
+		<beans:property name="port" value="587" /><!-- 465 or 25 -->
+		<beans:property name="username" value="kh.connectcloset@gmail.com" />
+		<beans:property name="password" value="connectCloset@@" />
+		<beans:property name="defaultEncoding" value="utf-8" />
+		<beans:property name="javaMailProperties">
+			<beans:props>
+				<beans:prop key="mail.transport.protocol">smtp</beans:prop>
+				<beans:prop key="mail.smtp.auth">true</beans:prop>
+				<beans:prop key="mail.smtp.starttls.enable">true</beans:prop>
+				<beans:prop key="mail.debug">true</beans:prop>
+			</beans:props>
+		</beans:property>
+	</beans:bean>
+	<!-- 회원가입 메일 인증 -->
+	
+	
 	<!-- Spring Container에 bean을 등록하는 역할  : 지정한 패키지를 포함하는 하위의 모든 @Component 어노테이션이 붙은 클래스를 bean으로 생성, 관리한다.-->
 	<!-- @Controller, @Service, @Repository가 @Component의 후손이라 인식한다 -->
 	<!-- bean의 이름은 소문자로 시작하는 class명이다 -->

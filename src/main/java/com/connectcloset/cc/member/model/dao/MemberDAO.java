@@ -8,4 +8,8 @@ public interface MemberDAO {
 
 	Member selectOneMember(String memberId);
 
+	int GetKey(String memberId, String validateKey);//사용자 인증키 생성 메서드
+	
+	int alter_userKey(String memberId, String validateKey);
+
 }
