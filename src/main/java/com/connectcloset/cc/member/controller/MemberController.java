@@ -16,8 +16,10 @@ import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.connectcloset.cc.member.model.exception.MemberException;
+import com.connectcloset.cc.member.model.service.MemberService;
 import com.connectcloset.cc.member.model.vo.Member;
-import com.connectcloset.cc.member.service.MemberService;
+
+import oracle.jdbc.proxy.annotation.Post;
 
 /*value로 지정한 이름의 변수들은 session에 담아둔다.*/
 @SessionAttributes(value= {"memberLoggedIn"})
@@ -36,6 +38,56 @@ public class MemberController {
 	@RequestMapping("/member/login-register.do")
 	public void memberLogin() {
 		
+	}
+	
+	@PostMapping("/member/enrollMember.do")
+	public String enrollMember(Model model, Member m) {
+		logger.debug("회원등록요청");
+		String rawPwd = m.getPassword();
+		logger.debug("Member={}",m);
+		logger.debug("rawPwd={}",rawPwd);
+		String encryptPwd = bcryptPasswordEncoder.encode(rawPwd);
+		
+		m.setPassword(encryptPwd);
+		
+		int result = memberService.enrollMember(m);
+		logger.debug("result= {}",result);
+		
+		model.addAttribute("msg", result>0?"등록성공":"등록실패");
+		model.addAttribute("loc", "/");
+		return "common/msg";
+	}
+	
+	@PostMapping("/member/loginMember.do")
+	public ModelAndView loginMember(ModelAndView mav, @RequestParam String memberId, @RequestParam String password, HttpSession session) {
+		logger.debug("로그인 시도");
+		Member m = memberService.selectOneMember(memberId);
+		
+		String msg = "";
+		String loc = "/";
+		
+		if(m==null) {
+			msg="존재하지 않는 아이디입니다.";
+		}
+		else {
+			if(bcryptPasswordEncoder.matches(password, m.getPassword())) {
+				msg="로그인성공! "+m.getMemberName()+"님 환영합니다.";
+				
+				//세션에 로그인 객체 저장
+				mav.addObject("memberLoggedIn",m);
+			}
+			else {
+				msg="비밀번호가 틀렸습니다.";
+			}
+		}
+		
+		mav.addObject("msg",msg);
+		mav.addObject("loc",loc);
+		
+		mav.setViewName("common/msg");
+		
+		
+		return mav;
 	}
 	
 	@RequestMapping("/etc/contact-us.do")

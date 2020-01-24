@@ -7,7 +7,14 @@
 <fmt:requestEncoding value="utf-8"/>
 
 <jsp:include page="/WEB-INF/views/common/header.jsp" />
-
+<style>
+.main-menu ul li a {
+	color: #15273E !important;
+}
+</style>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=44742f99c1b6e1903583f076c4caeaf8"></script>
+<!-- services와 clusterer, drawing 라이브러리 불러오기 -->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"></script>
 <!-- main-search start -->
         <div class="main-search-active">
             <div class="sidebar-search-icon">
@@ -141,5 +148,25 @@
                 </div>
             </div>
         </div>
+        <script>
+			var container = document.getElementById('map2');// 지도를 표시할 div 
+			var options = {
+				center: new kakao.maps.LatLng(37.498500, 127.032596),// 지도의 중심좌표
+				level: 3// 지도의 확대 레벨
+			};
+	
+			var map = new kakao.maps.Map(container, options); // 지도를 생성합니다
+			
+			// 마커가 표시될 위치입니다 
+			var markerPosition  = new kakao.maps.LatLng(37.498500, 127.032596); 
+
+			// 마커를 생성합니다
+			var marker = new kakao.maps.Marker({
+			    position: markerPosition
+			});
+
+			// 마커가 지도 위에 표시되도록 설정합니다
+			marker.setMap(map);
+		</script>
 
 <jsp:include page="/WEB-INF/views/common/footer.jsp" />

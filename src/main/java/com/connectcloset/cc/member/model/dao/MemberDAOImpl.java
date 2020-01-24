@@ -14,17 +14,12 @@ public class MemberDAOImpl implements MemberDAO{
 	SqlSessionTemplate sqlSession;
 
 	@Override
-	public int insertMember(Member member) {
-		return sqlSession.insert("member.insertMember",member);
+	public int enrollMember(Member m) {
+		return sqlSession.insert("member.enrollMember", m);
 	}
 
 	@Override
 	public Member selectOneMember(String memberId) {
-		return sqlSession.selectOne("member.selectOneMember",memberId);
-	}
-
-	@Override
-	public int updateMember(Member member) {
-		return sqlSession.update("member.updateMember",member);
+		return sqlSession.selectOne("member.selectOneMember", memberId);
 	}
 }

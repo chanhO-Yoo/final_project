@@ -2,21 +2,17 @@ package com.connectcloset.cc.member.model.vo;
 
 import java.io.Serializable;
 import java.sql.Date;
-import java.util.Arrays;
 
 public class Member implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+	private int memberNo;
 	private String memberId;
-	private String password;
 	private String memberName;
-	private String gender;
-	private int age;
-	private String email;
 	private String phone;
-	private String address;
-	private String[] hobby;
+	private String email;
+	private String password;
 	private Date enrollDate;
 	
 	public Member() {
@@ -24,19 +20,24 @@ public class Member implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Member(String memberId, String password, String memberName, String gender, int age, String email,
-			String phone, String address, String[] hobby, Date enrollDate) {
+	public Member(int memberNo, String memberId, String memberName, String phone, String email, String password,
+			Date enrollDate) {
 		super();
+		this.memberNo = memberNo;
 		this.memberId = memberId;
-		this.password = password;
 		this.memberName = memberName;
-		this.gender = gender;
-		this.age = age;
-		this.email = email;
 		this.phone = phone;
-		this.address = address;
-		this.hobby = hobby;
+		this.email = email;
+		this.password = password;
 		this.enrollDate = enrollDate;
+	}
+
+	public int getMemberNo() {
+		return memberNo;
+	}
+
+	public void setMemberNo(int memberNo) {
+		this.memberNo = memberNo;
 	}
 
 	public String getMemberId() {
@@ -47,44 +48,12 @@ public class Member implements Serializable {
 		this.memberId = memberId;
 	}
 
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
 	public String getMemberName() {
 		return memberName;
 	}
 
 	public void setMemberName(String memberName) {
 		this.memberName = memberName;
-	}
-
-	public String getGender() {
-		return gender;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
 	}
 
 	public String getPhone() {
@@ -95,20 +64,20 @@ public class Member implements Serializable {
 		this.phone = phone;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String[] getHobby() {
-		return hobby;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setHobby(String[] hobby) {
-		this.hobby = hobby;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public Date getEnrollDate() {
@@ -125,10 +94,10 @@ public class Member implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Member [memberId=" + memberId + ", password=" + password + ", memberName=" + memberName + ", gender="
-				+ gender + ", age=" + age + ", email=" + email + ", phone=" + phone + ", address=" + address
-				+ ", hobby=" + Arrays.toString(hobby) + ", enrollDate=" + enrollDate + "]";
+		return "Member [memberNo=" + memberNo + ", memberId=" + memberId + ", memberName=" + memberName + ", phone="
+				+ phone + ", email=" + email + ", password=" + password + ", enrollDate=" + enrollDate + "]";
 	}
+	
 	
 	
 	
