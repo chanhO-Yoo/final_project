@@ -7,11 +7,17 @@
 		insert into member values(
 		seq_member_no.nextval,
 		#{memberId },
+		#{memberPassword },
 		#{memberName },
-		#{phone },
-		#{email },
-		#{password },
-		sysdate
+		#{memberPhone },
+		#{memberEmail },
+		#{memberPostcode},
+		#{memberAddress},
+		#{memberDetailAddress},
+		#{memberGender},
+		#{memberBirthday},
+		'N',
+		default
 		)
 	</insert>
 
@@ -22,6 +28,14 @@
 	<resultMap type="member" id="memberMap">
 		
 	</resultMap>
+	
+	<update id="GetKey" parameterType="Map">
+		update member set member_validate_key= #{validateKey} where member_id=#{memberId}
+	</update>
+
+	<update id="alterUserKey" parameterType="Map">
+		update member set member_validate_key= 'Y' where member_id=#{memberId} and member_validate_key = #{validateKey}
+	</update>
 
 </mapper>
     
