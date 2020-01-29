@@ -98,13 +98,13 @@
                                         <input type="text">
                                     </div>
                                 </div>
-                                <div class="col-lg-12">
+                               <!--  <div class="col-lg-12">
                                     <div class="billing-info mb-25">
                                         <label>Company Name</label>
                                         <input type="text">
                                     </div>
-                                </div>
-                                <div class="col-lg-12">
+                                </div> -->
+                               <!--  <div class="col-lg-12">
                                     <div class="billing-select mb-25">
                                         <label>Country</label>
                                         <select>
@@ -116,7 +116,7 @@
                                             <option>Barbados</option>
                                         </select>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-lg-12">
                                     <div class="billing-info mb-25">
                                         <label>Street Address</label>
@@ -124,13 +124,13 @@
                                         <input placeholder="Apartment, suite, unit etc." type="text">
                                     </div>
                                 </div>
-                                <div class="col-lg-12">
+                               <!--  <div class="col-lg-12">
                                     <div class="billing-info mb-25">
                                         <label>Town / City</label>
                                         <input type="text">
                                     </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
+                                </div> -->
+                               <!--  <div class="col-lg-6 col-md-6">
                                     <div class="billing-info mb-25">
                                         <label>State / County</label>
                                         <input type="text">
@@ -141,7 +141,7 @@
                                         <label>Postcode / ZIP</label>
                                         <input type="text">
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-lg-6 col-md-6">
                                     <div class="billing-info mb-25">
                                         <label>Phone</label>

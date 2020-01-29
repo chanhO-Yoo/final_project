@@ -102,10 +102,11 @@
 						<div class="tab-content login-regi-content">
 							<div id="login" class="tab-pane active">
 								<div class="login-register-form">
-									<form action="${pageContext.request.contextPath}/member/memberLogin.do" method="post">
+									<form
+										action="${pageContext.request.contextPath}/member/memberLogin.do"
+										method="post">
 										<input type="text" name="memberId" placeholder="Your Name">
-										<input type="password" name="password"
-											placeholder="Password">
+										<input type="password" name="password" placeholder="Password">
 										<div class="submit-btn">
 											<button class="btn-hover" type="submit">Log In</button>
 										</div>
@@ -126,13 +127,12 @@
 										action="${pageContext.request.contextPath}/member/login-register.do"
 										method="post">
 
-										
-                                                <input type="text" name="memberId" placeholder="Id">
-                                                <input type="text" name="memberName" placeholder="userName">                                              
-                                                <input type="email" name="email" placeholder="Email" >
-                                                <input type="text" name="phone" placeholder="Telephone">
-                                                <input type="password" name="password" placeholder="pssword">
-                                               
+										<input type="text" name="memberId" placeholder="Id"> <input
+											type="text" name="memberName" placeholder="userName">
+										<input type="email" name="email" placeholder="Email">
+										<input type="text" name="phone" placeholder="Telephone">
+										<input type="password" name="password" placeholder="pssword">
+
 										<div class="submit-btn">
 											<button class="btn-hover" type="submit">Register</button>
 										</div>
