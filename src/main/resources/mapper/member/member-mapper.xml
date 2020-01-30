@@ -3,6 +3,7 @@
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="member">
+<<<<<<< HEAD
 	<insert id="enrollMember">
 		insert into member values(
 		seq_member_no.nextval,
@@ -46,3 +47,23 @@
     
     
     
+=======
+	<insert id="insertMember">
+		insert into member
+		values(seq_member_no.nextval,
+			   #{memberId},
+			   #{memberName},
+			   #{phone},
+			   #{email},
+			   #{password},
+			   default)
+	</insert>
+	<select id="selectOneMember" resultMap="memberMap">
+		select * from member
+		where member_Id = #{memberId}
+	</select>
+	<resultMap type="member" id="memberMap">
+		<result column="hobby" property="hobby" typeHandler="strArrTypeHandler"/>
+	</resultMap>
+</mapper>
+>>>>>>> branch 'master' of https://github.com/chanhO-Yoo/final_project.git

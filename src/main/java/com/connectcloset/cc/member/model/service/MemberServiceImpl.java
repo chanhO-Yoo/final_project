@@ -13,8 +13,13 @@ public class MemberServiceImpl implements MemberService{
 	MemberDAO memberDAO;
 
 	@Override
+<<<<<<< HEAD
 	public int enrollMember(Member m) {
 		return memberDAO.enrollMember(m);
+=======
+	public int insertMember(Member member) {
+		return memberDAO.insertMember(member);
+>>>>>>> branch 'master' of https://github.com/chanhO-Yoo/final_project.git
 	}
 
 	@Override

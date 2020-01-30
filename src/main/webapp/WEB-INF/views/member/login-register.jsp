@@ -97,7 +97,11 @@
                                 <div class="tab-content login-regi-content">
                                     <div id="login" class="tab-pane active">
                                         <div class="login-register-form">
+<<<<<<< HEAD
                                             <form action="${pageContext.request.contextPath }/member/loginMember.do" method="post">
+=======
+                                            <form name="memberLoginFrm" action="${pageContext.request.contextPath}/member/memberLogin.do" method="post">
+>>>>>>> branch 'master' of https://github.com/chanhO-Yoo/final_project.git
                                                 <input type="text" name="memberId" placeholder="ID">
                                                 <input type="password" name="password" placeholder="Password">
                                                 <div class="submit-btn">
@@ -115,6 +119,7 @@
                                     </div>
                                     <div id="register" class="tab-pane">
                                         <div class="login-register-form">
+<<<<<<< HEAD
                                             <form action="${pageContext.request.contextPath }/member/enrollMember.do" method="post">
 	                                            <div class="form-group row">
 													<label for="memberId" class="col-sm-2 col-form-label">아이디2</label>
@@ -198,6 +203,15 @@
 											    	</div>
 												</div>
                    	                            <div class="submit-btn">
+=======
+                                            <form name="memberSignInFrm" action="${pageContext.request.contextPath}/member/SignInEnd.do" method="post">
+                                                <input type="text" name="memberId" placeholder="ID">
+                                                <input type="text" name="memberName" placeholder="NAME">
+                                                <input type="text" name="phone" placeholder="Telephone">
+                                                <input name="email" placeholder="email" type="email">
+                                                <input type="password" name="password" placeholder="Password">
+                                                <div class="submit-btn">
+>>>>>>> branch 'master' of https://github.com/chanhO-Yoo/final_project.git
                                                     <button class="btn-hover" type="submit">Register</button>
                                                 </div>
                                             </form>

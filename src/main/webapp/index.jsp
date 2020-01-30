@@ -8,7 +8,7 @@
         <!-- Slider Start -->
         <div class="slider-area">
             <div class="slider-active pagination-style1 owl-carousel">
-                <div class="single-slider slider-overly bg-img pt-50 height-100vh d-flex align-items-center" data-dot="01" style="background-image: url(${pageContext.request.contextPath }/resources/img/slider/slider-16.jpg);">
+                <div class="single-slider slider-overly bg-img pt-50 height-100vh d-flex align-items-center" data-dot="01" style="background-image: url(${pageContext.request.contextPath }/resources/img/slider/givenchy1.jpg);">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12 col-md-12">
@@ -25,14 +25,14 @@
                         </div>
                     </div>
                 </div> 
-                <div class="single-slider slider-overly bg-img pt-50 height-100vh d-flex align-items-center" data-dot="02" style="background-image: url(${pageContext.request.contextPath }/resources/img/slider/slider-15.jpg);">
+                <div class="single-slider slider-overly bg-img pt-50 height-100vh d-flex align-items-center" data-dot="02" style="object-fit: cover; background-image: url(${pageContext.request.contextPath }/resources/img/slider/givenchy.jpg);">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12 col-md-12">
                                 <div class="slider-text slider-animated-1 text-center">
-                                    <h1 class="animated">Unique Collections. </h1>
+                                    <h1 class="animated">GIVENCHY Collections. </h1>
                                     <h5 class="animated">
-                                       New Collections 2019 
+                                       Fall-Winter 2019-2020 Collection
                                     </h5>
                                     <div class="slider-btn mt-30">
                                         <a class="sub-slider-btn-1 animated mr-8 btn-hover" href="single-product.html">Shop now</a>
@@ -124,7 +124,7 @@
                     <div class="shop-wrap">
                         <div class="shop-img zoom-hover">
                             <a href="single-product.html">
-                                <img src="${pageContext.request.contextPath }/resources/img/product/shop-categories-1.jpg" alt="">
+                                <img src="${pageContext.request.contextPath }/resources/img/product/BANNER_LOOKWING SNEAKERS_crop.jpg" alt="">
                             </a>
                             <div class="shop-categories">
                                 <a href="#">Flip flops</a>

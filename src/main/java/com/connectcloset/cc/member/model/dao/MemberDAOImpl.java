@@ -25,6 +25,7 @@ public class MemberDAOImpl implements MemberDAO{
 	public Member selectOneMember(String memberId) {
 		return sqlSession.selectOne("member.selectOneMember", memberId);
 	}
+<<<<<<< HEAD
 
 	@Override
 	public int GetKey(String memberId, String validateKey) {
@@ -42,4 +43,6 @@ public class MemberDAOImpl implements MemberDAO{
 		map.put("validateKey", validateKey);
 		return sqlSession.update("member.alterUserKey", map);
 	}
+=======
+>>>>>>> branch 'master' of https://github.com/chanhO-Yoo/final_project.git
 }

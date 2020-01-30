@@ -9,12 +9,18 @@
 <jsp:include page="/WEB-INF/views/common/header.jsp" />
 <style>
 .main-menu ul li a {
+<<<<<<< HEAD
 	color: #15273E !important;
 }
 </style>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=44742f99c1b6e1903583f076c4caeaf8"></script>
 <!-- services와 clusterer, drawing 라이브러리 불러오기 -->
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"></script>
+=======
+	color: #15273e !important;
+}
+</style>
+>>>>>>> branch 'master' of https://github.com/chanhO-Yoo/final_project.git
 <!-- main-search start -->
         <div class="main-search-active">
             <div class="sidebar-search-icon">
