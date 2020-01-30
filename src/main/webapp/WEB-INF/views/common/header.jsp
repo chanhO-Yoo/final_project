@@ -334,7 +334,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="index.html">Pages2</a>
+                                <li><a href="index.html">Pages</a>
                                     <ul>
                                         <li><a href="${pageContext.request.contextPath }/etc/about-us.do">about us</a></li>
                                         <li><a href="${pageContext.request.contextPath }/shop/cart-page.do">cart page</a></li>
